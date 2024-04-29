@@ -27,6 +27,8 @@ let value = #sayHelloWorld(with: "XXXX") // "Hello World XXXX!!!"
 | 2 | Select `My Mac` from the Macs as the device to run on | ![スクリーンショット 2024-04-29 19 59 04](https://github.com/MrSmart00/HelloWorldMacro/assets/8654605/dd2b677b-7fed-4df2-a347-71b940523992) |
 | 3 | If set up this way, it is possible to test | ![スクリーンショット 2024-04-29 19 59 10](https://github.com/MrSmart00/HelloWorldMacro/assets/8654605/c5dbb743-03e2-4c87-9a36-ed5a3c965cf3) |
 
+https://forums.swift.org/t/cant-test-macros-on-xcode-15-1/69349
+
 ## PRECONDITION
 
 This time, the design involves adding macros within the app.<br>
