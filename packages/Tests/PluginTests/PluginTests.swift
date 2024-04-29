@@ -11,16 +11,16 @@ import XCTest
 
 #if canImport(Plugins)
 import Plugins
-
-let testMacros: [String: Macro.Type] = [
-    "sayHelloWorld": HelloWorld.self,
-]
 #endif
 
 final class HelloWorldPluginTests: XCTestCase {
 
     func test_Macro() throws {
         #if canImport(Plugins)
+        let testMacros: [String: Macro.Type] = [
+            "sayHelloWorld": HelloWorld.self,
+        ]
+
         assertMacroExpansion(
             """
             #sayHelloWorld("XXXX")
