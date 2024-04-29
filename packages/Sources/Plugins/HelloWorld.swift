@@ -18,11 +18,9 @@ public struct HelloWorld: ExpressionMacro {
               segments.count == 1,
               case .stringSegment(let literalSegment)? = segments.first
         else {
-            throw CustomError.message("Need a static string")
+            fatalError("Need a static string")
         }
         let result = "Hello World \(literalSegment.content.text)!!!"
         return "\(literal: result)"
     }
 }
-
-enum CustomError: Error { case message(String) }

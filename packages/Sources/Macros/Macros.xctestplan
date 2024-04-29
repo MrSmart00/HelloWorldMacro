@@ -1,20 +1,20 @@
 {
   "configurations" : [
     {
-      "id" : "A3C1A128-6A13-4D68-9B26-11802B6651B8",
-      "name" : "Configuration 1",
+      "id" : "47C4EF0C-0CE8-4E24-859B-D03E33DBECF6",
+      "name" : "Test Scheme Action",
       "options" : {
 
       }
     }
   ],
   "defaultOptions" : {
-
+    "codeCoverage" : false
   },
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:..\/packages",
+        "containerPath" : "container:",
         "identifier" : "PluginTests",
         "name" : "PluginTests"
       }

@@ -8,13 +8,30 @@
 import SwiftSyntaxMacros
 import SwiftSyntaxMacrosTestSupport
 import XCTest
-import Macros
+
+#if canImport(Plugins)
+import Plugins
+
+let testMacros: [String: Macro.Type] = [
+    "sayHelloWorld": HelloWorld.self,
+]
+#endif
 
 final class HelloWorldPluginTests: XCTestCase {
 
-    func testExample() throws {
-        let value = #sayHelloWorld(with: "XXXX")
-        XCTAssertEqual("Hello World XXXX!!!", value)
+    func test_Macro() throws {
+        #if canImport(Plugins)
+        assertMacroExpansion(
+            """
+            #sayHelloWorld("XXXX")
+            """,
+            expandedSource: """
+            "Hello World XXXX!!!"
+            """,
+            macros: testMacros
+        )
+        #else
+        throw XCTSkip("macros are only supported when running tests for the host platform")
+        #endif
     }
-
 }

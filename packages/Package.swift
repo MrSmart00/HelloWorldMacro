@@ -12,11 +12,22 @@ let package = Package(
             name: "packages",
             targets: ["App"]
         ),
+        .library(
+            name: "MacroFeature",
+            targets: ["Macros"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-syntax.git", from: "510.0.0"),
     ],
     targets: [
+        .macro(
+            name: "Plugins",
+            dependencies: [
+                .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
+                .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
+            ]
+        ),
         .target(
             name: "App",
             dependencies: [
@@ -27,13 +38,6 @@ let package = Package(
             name: "Macros",
             dependencies: [
                 "Plugins"
-            ]
-        ),
-        .macro(
-            name: "Plugins",
-            dependencies: [
-                .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
-                .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
             ]
         ),
         .testTarget(
