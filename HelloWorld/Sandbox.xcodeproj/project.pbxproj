@@ -18,6 +18,7 @@
 		2909B5852BDE539000B73353 /* SandboxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxApp.swift; sourceTree = "<group>"; };
 		2909B5892BDE539200B73353 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2909B58C2BDE539200B73353 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2909B5962BDF896700B73353 /* Sandbox.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Sandbox.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		2909B5792BDE539000B73353 = {
 			isa = PBXGroup;
 			children = (
+				2909B5962BDF896700B73353 /* Sandbox.xctestplan */,
 				2909B5842BDE539000B73353 /* Sandbox */,
 				2909B5832BDE539000B73353 /* Products */,
 				2909B5932BDE542800B73353 /* Frameworks */,

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "A3C1A128-6A13-4D68-9B26-11802B6651B8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/packages",
+        "identifier" : "PluginTests",
+        "name" : "PluginTests"
+      }
+    }
+  ],
+  "version" : 1
+}

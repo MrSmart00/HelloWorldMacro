@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Macros
 
 public struct ContentView: View {
     public init() { }
@@ -15,7 +16,7 @@ public struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(#sayHelloWorld(with: "Hiro"))
         }
         .padding()
     }
